@@ -3,14 +3,14 @@ languageCode = "en-us"
 title = "Blue Team Tech Writing"
 theme = "blue-team"
 
+[services]
+  [services.googleAnalytics]
+    id = 'G-NT691NMBVW'
+
 [params]
   description = "Cybersecurity content strategy, threat intelligence analysis, and blue team technical writing."
   tagline = "Clear signal from the noise."
   author = "Blue Team Tech Writing"
-
-[services]
-  [services.googleAnalytics]
-    id = 'G-NT691NMBVW'
 
 [taxonomies]
   tag = "tags"
