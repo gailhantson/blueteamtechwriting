@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Detection on Blue Team Tech Writing</title>
+    <link>http://localhost:1313/tags/detection/</link>
+    <description>Recent content in Detection on Blue Team Tech Writing</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 06 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/detection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blue Team Roundup: Week 01, 2026</title>
+      <link>http://localhost:1313/roundups/week-01-2026-blue-team-roundup/</link>
+      <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/roundups/week-01-2026-blue-team-roundup/</guid>
+      <description>&lt;h2 id=&#34;this-week-in-blue-team&#34;&gt;This Week in Blue Team&lt;/h2&gt;&#xA;&lt;p&gt;The first week of 2026 brought a cluster of high-severity disclosures across network appliances and a notable shift in ransomware operator TTPs. Below is the signal worth tracking.&lt;/p&gt;&#xA;&lt;h2 id=&#34;notable-cves--vulnerabilities&#34;&gt;Notable CVEs &amp;amp; Vulnerabilities&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;CVE-2026-XXXX — Network Appliance RCE&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Pre-auth remote code execution affecting a widely deployed edge appliance. Patch available; prioritize internet-facing assets.&lt;/p&gt;&#xA;&lt;h2 id=&#34;threat-actor-activity&#34;&gt;Threat Actor Activity&lt;/h2&gt;&#xA;&lt;p&gt;A financially motivated actor has added living-off-the-land techniques to their initial access playbook, reducing reliance on commodity malware in favor of native OS tooling. Detection coverage in standard EDR rules may be thinner here.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

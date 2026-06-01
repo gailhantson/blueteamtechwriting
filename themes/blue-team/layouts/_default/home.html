@@ -1,0 +1,73 @@
+{{ define "main" }}
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-label">Cybersecurity Intelligence &amp; Blue Team Analysis</div>
+    <h1 class="hero-title">{{ .Site.Params.tagline }}</h1>
+    <p class="hero-description">{{ .Site.Params.description }}</p>
+    <div class="hero-actions">
+      <a href="/roundups/" class="btn btn-primary">Latest Roundups</a>
+      <a href="/about/" class="btn btn-ghost">About this site</a>
+    </div>
+  </div>
+</section>
+
+<section class="featured-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Recent Analysis</h2>
+      <a href="/roundups/" class="section-link">All posts &rarr;</a>
+    </div>
+    <div class="post-grid">
+      {{ range first 6 (where .Site.RegularPages "Type" "ne" "page") }}
+        <article class="post-card">
+          <div class="post-card-meta">
+            <span class="post-type">{{ .Type | title }}</span>
+            <time class="post-date">{{ .Date.Format "Jan 02, 2006" }}</time>
+          </div>
+          <h3 class="post-card-title">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h3>
+          <p class="post-card-summary">{{ .Summary | truncate 120 }}</p>
+          <div class="post-card-tags">
+            {{ range first 3 .Params.tags }}
+              <span class="tag">{{ . }}</span>
+            {{ end }}
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="topics-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Coverage Areas</h2>
+    </div>
+    <div class="topics-grid">
+      <div class="topic-card">
+        <div class="topic-icon">01</div>
+        <h3>Threat Intelligence</h3>
+        <p>Weekly roundups of notable CVEs, threat actor activity, and incident disclosures.</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-icon">02</div>
+        <h3>Defensive Tooling</h3>
+        <p>Analysis of SIEM, EDR, and detection engineering tools used by blue teams.</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-icon">03</div>
+        <h3>Regulatory &amp; Compliance</h3>
+        <p>Breakdowns of NIST, CIS, and policy developments affecting security teams.</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-icon">04</div>
+        <h3>Practitioner Resources</h3>
+        <p>Frameworks, checklists, and reference material for working security professionals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
