@@ -7,7 +7,10 @@ theme = "blue-team"
   description = "Cybersecurity content strategy, threat intelligence analysis, and blue team technical writing."
   tagline = "Clear signal from the noise."
   author = "Blue Team Tech Writing"
-  ga4_id = "G-NT691NMBVW"
+
+[services]
+  [services.googleAnalytics]
+    id = 'G-NT691NMBVW'
 
 [taxonomies]
   tag = "tags"
