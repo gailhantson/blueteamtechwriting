@@ -1,15 +1,21 @@
 ---
-title: "About"
+title: "About Blue Team Technical Writing"
 type: page
+date: 2026-06-01
 ---
 
-Blue Team Tech Writing covers cybersecurity from the defensive side — threat intelligence, detection engineering, tooling analysis, and practitioner resources.
+Blue Team Tech Writing is a technical writing and documentation practice focused on cybersecurity, infrastructure, and defensive security.
 
-This site is an independent publication. Coverage focuses on signal over noise: what actually matters to security teams working in the trenches.
+The name comes from blue teams: the people responsible for protecting systems, responding to incidents, and maintaining resilience. Their work is often invisible when things are going well, but essential when they are not.
 
-**Content types:**
+Documentation serves a similar purpose.
 
-- **Weekly Roundups** — Notable CVEs, threat actor activity, and tooling news distilled into readable form
-- **Analysis** — Deeper dives into specific threats, tools, or frameworks
+Organizations run on knowledge: procedures, architectures, decisions, lessons learned, and operational practices. When that knowledge is difficult to find or understand, systems become fragile.
 
-Built and written independently. No sponsored content.
+**Good documentation makes organizations more resilient.**
+
+Blue Team Tech Writing helps organizations create clear, accurate, and useful documentation for technical audiences, including security guidance, operational procedures, architecture documentation, knowledge bases, and technical articles.
+
+Alongside client work, this site publishes research, guides, and resources for practitioners working in cybersecurity and defensive operations.
+
+**Knowledge deserves stewardship.**
