@@ -2,41 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/roundups/week-01-2026-blue-team-roundup/</loc>
-    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
+    <loc>https://blueteamtechwriting.com/about/</loc>
+    <lastmod>2026-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
+    <loc>https://blueteamtechwriting.com/</loc>
+    <lastmod>2026-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/cve/</loc>
-    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/detection/</loc>
-    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/roundup/</loc>
-    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/roundups/</loc>
-    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/siem/</loc>
-    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/threat-intelligence/</loc>
-    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://blueteamtechwriting.com/posts/</loc>
     <lastmod>2023-01-01T08:30:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://blueteamtechwriting.com/analysis/</loc>
   </url><url>
-    <loc>http://localhost:1313/analysis/</loc>
+    <loc>https://blueteamtechwriting.com/categories/</loc>
+  </url><url>
+    <loc>https://blueteamtechwriting.com/roundups/</loc>
+  </url><url>
+    <loc>https://blueteamtechwriting.com/tags/</loc>
   </url>
 </urlset>
