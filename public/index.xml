@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blue Team Tech Writing</title>
-    <link>https://blueteamtechwriting.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Blue Team Tech Writing</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jun 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://blueteamtechwriting.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Blue Team Technical Writing</title>
-      <link>https://blueteamtechwriting.com/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>https://blueteamtechwriting.com/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;p&gt;Blue Team Tech Writing is a technical writing and documentation practice focused on cybersecurity, infrastructure, and defensive security.&lt;/p&gt;&#xA;&lt;p&gt;The name comes from blue teams: the people responsible for protecting systems, responding to incidents, and maintaining resilience. Their work is often invisible when things are going well, but essential when they are not.&lt;/p&gt;&#xA;&lt;p&gt;Documentation serves a similar purpose.&lt;/p&gt;&#xA;&lt;p&gt;Organizations run on knowledge: procedures, architectures, decisions, lessons learned, and operational practices. When that knowledge is difficult to find or understand, systems become fragile.&lt;/p&gt;</description>
     </item>
   </channel>
