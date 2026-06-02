@@ -309,7 +309,7 @@ main { flex: 1; }
 }
 
 /* --- LIST PAGE --- */
-.page-container { padding: 56px 0; display: grid; place-items: center; margin-left: 1rem;}
+.page-container { padding: 56px 0; display: grid; place-items: center; margin-left: 1rem; margin-right: 1rem;}
 .page-header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid var(--color-border); }
 .page-title {
   font-family: var(--font-serif);
@@ -357,7 +357,7 @@ main { flex: 1; }
 .post-row:hover .post-row-arrow { color: var(--color-accent); transform: translateX(3px); }
 
 /* --- SINGLE POST --- */
-.single-container { padding: 56px 0 80px;  display: grid; place-items: center; margin-left: 1rem;}
+.single-container { padding: 56px 0 80px;  display: grid; place-items: center; margin-left: 1rem; margin-right: 1rem;}
 .post-single { max-width: var(--max-prose); }
 .post-single-header { margin-bottom: 40px; padding-bottom: 32px; border-bottom: 1px solid var(--color-border); }
 .post-single-meta {
