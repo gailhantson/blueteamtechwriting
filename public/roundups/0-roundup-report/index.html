@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The more I look at incident response, the more documentation seems to act like a security control.">
+<title>Roundup 0 - Incident Response Documentation, A Defensive Control | Blue Team Tech Writing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/main.min.css">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script async src="https://www.googletagmanager.com/gtag/js?id=%2fworkspaces%2fblueteamtechwriting%2fcontent%2froundups%2f0-roundup-report%2findex.md"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NT691NMBVW');
+</script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="site-logo">
+      <span class="logo-mark">&#9632;</span>
+      <span class="logo-text">Blue Team<br><em>Tech Writing</em></span>
+    </a>
+    <nav class="site-nav">
+      
+        <a href="/" class="nav-link">Home</a>
+      
+        <a href="/roundups/" class="nav-link">Roundups</a>
+      
+        <a href="/analysis/" class="nav-link">Analysis</a>
+      
+        <a href="/about/" class="nav-link">About</a>
+      
+    </nav>
+  </div>
+</header>
+
+  <main class="site-main">
+    
+<div class="container single-container">
+  <article class="post-single">
+    <header class="post-single-header">
+      <div class="post-single-meta">
+        <span class="post-type">Roundups</span>
+        <time class="post-date">June 02, 2026</time>
+      </div>
+      <h1 class="post-single-title">Roundup 0 - Incident Response Documentation, A Defensive Control</h1>
+      <p class="post-single-description">Incident response documentation is often treated as a compliance requirement or administrative task. In this article, I explore why runbooks, playbooks, and other forms of blue team documentation may function as defensive controls that help teams operate under pressure.</p>
+      <div class="post-single-tags">
+        
+      </div>
+    </header>
+    <div class="post-body">
+      <p><img src="documentation.jpg" alt="Documentation"></p>
+<p>Most people don&rsquo;t think of documentation as a security control.</p>
+<p>When we talk about defensive security, we usually talk about things we can point to:</p>
+<ul>
+<li>Firewalls</li>
+<li>EDR</li>
+<li>SIEMs</li>
+<li>Detection rules</li>
+<li>MFA</li>
+</ul>
+<p>Documentation often sits in a different category. It feels administrative - something that comes on the side of security work, rather than security work itself.</p>
+<p>Lately, I&rsquo;ve been questioning that assumption.</p>
+<p>Documentation seems to behave like a defensive control. It fails in many of the same ways, degrades over time, and requires maintenance. When it is missing during an incident, everyone notices immediately.</p>
+<p>This is Roundup 0 of <em>Blue Team Tech Writing</em>, a series built around questions and observations from defensive security work. I&rsquo;ll be exploring how documentation, communication, and technical writing influence the way blue teams operate.</p>
+<p>A lot of those questions seem to lead back to the same place: documentation.</p>
+<p>So that&rsquo;s where I&rsquo;ll start.</p>
+<h2 id="the-failure-mode-is-identical">The Failure Mode Is Identical</h2>
+<p>The idea that pushed me toward this investigation wasn&rsquo;t simply that documentation supports security work. Most things in a security program support security work in some way. What caught my attention was how documentation fails.</p>
+<p>The failure patterns feel familiar.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Security Control</th>
+          <th>Documentation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Requires maintenance</td>
+          <td>Requires maintenance</td>
+      </tr>
+      <tr>
+          <td>Degrades over time</td>
+          <td>Degrades over time</td>
+      </tr>
+      <tr>
+          <td>Often ignored when working</td>
+          <td>Often ignored when working</td>
+      </tr>
+      <tr>
+          <td>Tested during incidents</td>
+          <td>Tested during incidents</td>
+      </tr>
+      <tr>
+          <td>Failure becomes obvious under pressure</td>
+          <td>Failure becomes obvious under pressure</td>
+      </tr>
+  </tbody>
+</table>
+<p>An incident response playbook can look complete during a review. A security runbook can exist in a wiki and satisfy every documentation requirement. Everything appears fine until someone actually needs it.</p>
+<p>Then reality starts asking questions:</p>
+<ul>
+<li>Does this process still exist?</li>
+<li>Is this screenshot still accurate?</li>
+<li>Is this escalation path correct?</li>
+<li>Does anyone still have these permissions?</li>
+<li>Who owns this system now?</li>
+</ul>
+<p>The incident didn&rsquo;t create those problems - it simply exposed them.</p>
+<p>What interests me most is that neither security controls nor documentation usually announce their decline. They tend to fail quietly.</p>
+<h3 id="knowledge-has-a-single-point-of-failure">Knowledge Has a Single Point of Failure</h3>
+<p>Another pattern I&rsquo;ve noticed has less to do with technology and more to do with people. Most teams rely on some amount of undocumented knowledge.</p>
+<p>For example:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Question</th>
+          <th>Common Answer</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Who owns this system?</td>
+          <td>&ldquo;Ask Sarah.&rdquo;</td>
+      </tr>
+      <tr>
+          <td>How do we investigate this alert?</td>
+          <td>&ldquo;John knows the process.&rdquo;</td>
+      </tr>
+      <tr>
+          <td>Where is that credential stored?</td>
+          <td>&ldquo;I think Mike set that up.&rdquo;</td>
+      </tr>
+      <tr>
+          <td>Why was this exception approved?</td>
+          <td>&ldquo;I&rsquo;m not sure, but Alex would know.&rdquo;</td>
+      </tr>
+  </tbody>
+</table>
+<p>Sometimes, this works. The problem is that incidents change the operating environment.</p>
+<p>During an incident:</p>
+<ul>
+<li>People are tired.</li>
+<li>Time is compressed.</li>
+<li>Information is incomplete.</li>
+<li>Decisions carry more weight.</li>
+<li>Key personnel may be unavailable.</li>
+</ul>
+<p>Under those conditions, tribal knowledge becomes harder to access.</p>
+<p>This is where incident response documentation starts looking less like administration and more like infrastructure. A runbook doesn&rsquo;t replace expertise, but it can preserve expertise. A playbook doesn&rsquo;t eliminate judgment, but it can reduce uncertainty.</p>
+<p>At a minimum, it gives responders somewhere to start.</p>
+<p>And the more I think about it, the more that sounds like the purpose of many defensive controls in the first place: reducing uncertainty when conditions are at their worst.</p>
+<h2 id="what-the-frameworks-already-know">What the Frameworks Already Know</h2>
+<p>The major incident response frameworks already understand that documentation is operational infrastructure, not administrative overhead. They just don&rsquo;t always use that language.</p>
+<p>NIST&rsquo;s Cybersecurity Framework calls out documentation as part of the &ldquo;Detect&rdquo; and &ldquo;Respond&rdquo; functions. Specifically, it expects organizations to have documented processes for incident detection, analysis, and response. NIST 800-61 (Computer Security Incident Handling Guide) goes further: it requires playbooks, procedures, and communication plans. These aren&rsquo;t suggestions. They&rsquo;re control requirements.</p>
+<p>CIS Controls takes a similar line. Control 19 (Incident Response Management) explicitly requires documented procedures for incident response.</p>
+<p>What&rsquo;s interesting is that both frameworks recognize documentation degrades. NIST 800-61 includes maintenance schedules. CIS Controls includes testing. Neither framework seems to assume documentation will simply exist and remain current. They build degradation into the model.</p>
+<p>But here&rsquo;s the gap in how frameworks are typically implemented: they treat documentation as a checkbox. &ldquo;Do you have a playbook? Yes.&rdquo; &ldquo;Is it current? We think so.&rdquo; The frameworks require documentation to exist and to be tested, but they don&rsquo;t give teams much guidance on how to write documentation that survives contact with reality.
+That&rsquo;s where the practitioner work begins.</p>
+<h2 id="the-practicioner-gap">The Practicioner Gap</h2>
+<p>In my experience, the gap between what frameworks require and what teams actually use comes down to a single problem: documentation written by people who have never had to use it during an incident.</p>
+<p>When a runbook is created during a calm period, it often reflects how someone thinks the process works, not how it actually works under pressure.</p>
+<p>More critically, documentation written without pressure testing doesn&rsquo;t account for the cognitive load of incident response. A perfectly complete playbook can still fail if it&rsquo;s written in a way that assumes people have time to parse it. During an incident, responders need to scan, not read. They need clear decision trees, not narrative explanations. They need to know what to do in the first thirty seconds.</p>
+<p>The practitioner gap is the space between &ldquo;documentation that satisfies compliance&rdquo; and &ldquo;documentation that actually gets used when everything is on fire.&rdquo;</p>
+<p>There&rsquo;s another gap, too: most blue teamers aren&rsquo;t trained as writers. They&rsquo;re security professionals who&rsquo;ve been asked to document their work. The result is often technically accurate but operationally unclear. Runbooks that are correct but slow to parse. Playbooks that cover the process but miss the pressure points.</p>
+<p>This is where incident response documentation stops looking like a writing problem and starts looking like a design problem. How do you architect documentation so that it&rsquo;s maintainable, scannable, and pressure-tested? How do you make it something teams will actually refer to when conditions are worst?</p>
+<p>That&rsquo;s what Blue Team Tech Writing is here to explore.</p>
+<h2 id="what-blue-team-tech-writing-is-building">What <em>Blue Team Tech Writing</em> Is Building</h2>
+<p>This publication is built around a single premise: <strong>documentation is a defensive control, and it deserves the same rigor, testing, and maintenance that we apply to technical defenses.</strong></p>
+<p>That means we&rsquo;re going to be exploring:</p>
+<ul>
+<li><strong>Patterns and architectures</strong> for incident response documentation that survive real incidents and degrade gracefully</li>
+<li><strong>Testing strategies</strong> that reveal whether documentation will actually work when you need it</li>
+<li><strong>Design principles</strong> for runbooks, playbooks, and procedures that account for cognitive load and time pressure</li>
+<li><strong>Maintenance frameworks</strong> that keep documentation current without requiring constant rewriting</li>
+<li><strong>Case studies</strong> from real incidents: what documentation worked, what failed, and why</li>
+</ul>
+<p>Each roundup will examine a specific aspect of documentation as it functions in defensive security work. Some will be theoretical. Some will be tactical. All of them will start from the same place: the observation that documentation fails like a security control fails, and that&rsquo;s not a metaphor—it&rsquo;s an architectural problem we can solve.</p>
+<p>The frameworks already know documentation matters. The practitioners already understand the gap. What&rsquo;s missing is a systematic approach to treating documentation <em>as infrastructure</em>, not as administration.</p>
+<p>That&rsquo;s what we&rsquo;re building here.</p>
+
+    </div>
+    <footer class="post-single-footer">
+      <div class="post-nav">
+        
+        
+      </div>
+    </footer>
+  </article>
+</div>
+
+  </main>
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-mark">&#9632;</span>
+      <span>Blue Team Tech Writing</span>
+    </div>
+    <p class="footer-tagline">Clear signal from the noise.</p>
+    <p class="footer-copy">&copy; 2026 Blue Team Tech Writing. Independent analysis.</p>
+  </div>
+</footer>
+
+</body>
+</html>

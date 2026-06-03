@@ -30,8 +30,10 @@
           </h3>
           <p class="post-card-summary">{{ .Summary | truncate 120 }}</p>
           <div class="post-card-tags">
-            {{ range first 3 .Params.tags }}
-              <span class="tag">{{ . }}</span>
+            {{ with .Params.tags }}
+              {{ range first 3 . }}
+                <span class="tag">{{ . }}</span>
+              {{ end }}
             {{ end }}
           </div>
         </article>

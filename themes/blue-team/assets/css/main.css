@@ -438,6 +438,13 @@ main { flex: 1; }
 .post-body td { padding: 9px 14px; border: 1px solid var(--color-border); }
 .post-body tr:nth-child(even) td { background: var(--color-bg); }
 
+.post-body img {
+  max-width: 50%;     /* Makes the image smaller (adjust percentage as needed) */
+  height: auto;       /* Maintains the original aspect ratio */
+  display: block;     /* Changes the image from inline to a block element */
+  margin: 0 auto; 
+}
+
 /* --- POST NAV --- */
 .post-single-footer { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--color-border); }
 .post-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
