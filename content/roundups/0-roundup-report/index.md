@@ -1,138 +1,105 @@
 ---
-title: Roundup 0 - Incident Response Documentation, A Defensive Control
+title: Roundup 0 - Before We Begin
 date: 2026-06-02
-summary: The more I look at incident response, the more documentation seems to act like a security control.
-description: Incident response documentation is often treated as a compliance requirement or administrative task. In this article, I explore why runbooks, playbooks, and other forms of blue team documentation may function as defensive controls that help teams operate under pressure.
+summary: Why I started Blue Team Tech Writing and the questions I hope to explore.
+description: This publication is an attempt to explore the role documentation plays in defensive security programs. Before getting into future topics, I wanted to explain why I became interested in the subject, what questions I hope to investigate, and what readers can expect going forward.
 
 ---
 
 ![Documentation](documentation.jpg)
 
-Most people don't think of documentation as a security control.
+## Why I started this publication
 
-When we talk about defensive security, we usually talk about things we can point to:
+I started this publication because I kept returning to the same topic: documentation.
 
-- Firewalls
-- EDR
-- SIEMs
-- Detection rules
-- MFA
+During my time working as a technical writer in cybersecurity, I was often surprised by the role documentation seemed to play within organizations. It appeared everywhere, yet it was often treated as a secondary concern.
 
-Documentation often sits in a different category. It feels administrative - something that comes on the side of security work, rather than security work itself.
+The more I observed this, the more questions I had. Blue Team Tech Writing exists because I want to explore those questions.
 
-Lately, I've been questioning that assumption.
+## I am not an expert
 
-Documentation seems to behave like a defensive control. It fails in many of the same ways, degrades over time, and requires maintenance. When it is missing during an incident, everyone notices immediately.
+I am not a seasoned security practitioner, nor am I the most experienced technical writer in the field. My perspective comes from working as a technical writer in cybersecurity and spending time around the people, processes, and technologies that make up defensive security programs. 
 
-This is Roundup 0 of _Blue Team Tech Writing_, a series built around questions and observations from defensive security work. I'll be exploring how documentation, communication, and technical writing influence the way blue teams operate.
+That exposure gave me enough context to notice certain patterns, but not enough to claim expertise on the questions this publication aims to explore.
 
-A lot of those questions seem to lead back to the same place: documentation.
+So why write about them?
 
-So that's where I'll start.
+Because worthwhile questions do not become less worthwhile simply because the person asking them lacks all the answers.
 
-## The Failure Mode Is Identical
+I do not see myself as an authority on these subjects. If anything, I see myself as someone trying to connect people and ideas.  My hope is that I can contribute something useful to the conversation.
 
-The idea that pushed me toward this investigation wasn't simply that documentation supports security work. Most things in a security program support security work in some way. What caught my attention was how documentation fails.
+## I have more questions than answers
 
-The failure patterns feel familiar.
-
-| Security Control                       | Documentation                          |
-| -------------------------------------- | -------------------------------------- |
-| Requires maintenance                   | Requires maintenance                   |
-| Degrades over time                     | Degrades over time                     |
-| Often ignored when working             | Often ignored when working             |
-| Tested during incidents                | Tested during incidents                |
-| Failure becomes obvious under pressure | Failure becomes obvious under pressure |
-
-
-An incident response playbook can look complete during a review. A security runbook can exist in a wiki and satisfy every documentation requirement. Everything appears fine until someone actually needs it.
-
-Then reality starts asking questions:
-
-- Does this process still exist?
-- Is this screenshot still accurate?
-- Is this escalation path correct?
-- Does anyone still have these permissions?
-- Who owns this system now?
-
-The incident didn't create those problems - it simply exposed them.
-
-What interests me most is that neither security controls nor documentation usually announce their decline. They tend to fail quietly.
-
-### Knowledge Has a Single Point of Failure
-
-Another pattern I've noticed has less to do with technology and more to do with people. Most teams rely on some amount of undocumented knowledge.
+The more I thought about documentation, the more questions I found myself asking. What started as an observation—that documentation often seems to be treated as a compliance requirement rather than an operational asset—quickly turned into a much larger set of questions.
 
 For example:
 
-|Question|Common Answer|
-|---|---|
-|Who owns this system?|"Ask Sarah."|
-|How do we investigate this alert?|"John knows the process."|
-|Where is that credential stored?|"I think Mike set that up."|
-|Why was this exception approved?|"I'm not sure, but Alex would know."|
+- Is documentation a security control? 
+- If so, what kind of control is it? 
+- Can documentation reduce risk in the same way automation reduces risk, by reducing reliance on memory and individual expertise? 
+- How many security controls depend on undocumented assumptions, and are there controls that effectively exist only because people remember them?
 
-Sometimes, this works. The problem is that incidents change the operating environment.
+I also find myself thinking about organizational knowledge:
 
-During an incident:
+- If an analyst discovers something important and nobody records it, has the organization actually learned anything? 
+- Is "tribal knowledge" simply a euphemism for undocumented operational risk? 
+- If a new employee cannot discover something on their own, does the organization truly know it? 
+- At what point does poor documentation become a business continuity issue rather than merely an inconvenience?
 
-- People are tired.
-- Time is compressed.
-- Information is incomplete.
-- Decisions carry more weight.
-- Key personnel may be unavailable.
+There are practical questions as well:
 
-Under those conditions, tribal knowledge becomes harder to access.
+- What distinguishes documentation that satisfies an auditor from documentation that helps an operator? 
+- Why does documentation so often get deferred until after the work is complete? 
+- Is documentation a lagging indicator of organizational maturity, or can it actively contribute to maturity over time?
 
-This is where incident response documentation starts looking less like administration and more like infrastructure. A runbook doesn't replace expertise, but it can preserve expertise. A playbook doesn't eliminate judgment, but it can reduce uncertainty.
+I do not have answers to these questions. In many cases, I am not even sure I am asking the right ones. But they seem worth exploring.
 
-At a minimum, it gives responders somewhere to start.
+## I want to hear from practitioners and technical writers
 
-And the more I think about it, the more that sounds like the purpose of many defensive controls in the first place: reducing uncertainty when conditions are at their worst.
+Many of the questions raised in this issue cannot be answered through reading alone. They require the perspectives of people who have encountered these problems in practice.
 
-## What the Frameworks Already Know
+Practitioners and technical writers often approach documentation from different angles, but both groups have valuable experience to contribute.
 
-The major incident response frameworks already understand that documentation is operational infrastructure, not administrative overhead. They just don't always use that language.
+Practitioners understand the realities of operating security programs, responding to incidents, managing tools, and making decisions under pressure. Technical writers bring expertise in organizing information, maintaining knowledge, and helping people find and use what they need.
 
-NIST's Cybersecurity Framework calls out documentation as part of the "Detect" and "Respond" functions. Specifically, it expects organizations to have documented processes for incident detection, analysis, and response. NIST 800-61 (Computer Security Incident Handling Guide) goes further: it requires playbooks, procedures, and communication plans. These aren't suggestions. They're control requirements.
+I suspect some of the most interesting insights exist at the intersection of those perspectives. Bringing those viewpoints together is one of the goals of this publication.
 
-CIS Controls takes a similar line. Control 19 (Incident Response Management) explicitly requires documented procedures for incident response.
+## This publication is an experiment
 
-What's interesting is that both frameworks recognize documentation degrades. NIST 800-61 includes maintenance schedules. CIS Controls includes testing. Neither framework seems to assume documentation will simply exist and remain current. They build degradation into the model.
+More specifically, it is an attempt to investigate a set of questions that I find increasingly difficult to ignore.
 
-But here's the gap in how frameworks are typically implemented: they treat documentation as a checkbox. "Do you have a playbook? Yes." "Is it current? We think so." The frameworks require documentation to exist and to be tested, but they don't give teams much guidance on how to write documentation that survives contact with reality.
-That's where the practitioner work begins.
+I suspect documentation plays a larger role in defensive security than it is often given credit for. I suspect there are lessons to be learned from the way organizations create, maintain, share, and lose operational knowledge. I suspect there are connections between documentation, resilience, continuity, onboarding, and day-to-day operations that are worth exploring. 
 
-## The Practicioner Gap
+At this point, however, they remain suspicions.
 
-In my experience, the gap between what frameworks require and what teams actually use comes down to a single problem: documentation written by people who have never had to use it during an incident.
+Rather than trying to present definitive answers, I would rather approach these questions as an investigation. 
 
-When a runbook is created during a calm period, it often reflects how someone thinks the process works, not how it actually works under pressure. 
+For now, the experiment is simple: ask good questions, follow the evidence, and see where it leads.
 
-More critically, documentation written without pressure testing doesn't account for the cognitive load of incident response. A perfectly complete playbook can still fail if it's written in a way that assumes people have time to parse it. During an incident, responders need to scan, not read. They need clear decision trees, not narrative explanations. They need to know what to do in the first thirty seconds.
+## What I might be wrong about
 
-The practitioner gap is the space between "documentation that satisfies compliance" and "documentation that actually gets used when everything is on fire."
+The biggest assumption behind this publication is that documentation matters more than many organizations treat it. That suspicion is what led me to start asking these questions in the first place. 
 
-There's another gap, too: most blue teamers aren't trained as writers. They're security professionals who've been asked to document their work. The result is often technically accurate but operationally unclear. Runbooks that are correct but slow to parse. Playbooks that cover the process but miss the pressure points.
+It may also be wrong.
 
-This is where incident response documentation stops looking like a writing problem and starts looking like a design problem. How do you architect documentation so that it's maintainable, scannable, and pressure-tested? How do you make it something teams will actually refer to when conditions are worst?
+I may be overestimating the role documentation plays in defensive security programs. It is possible that documentation is often downstream of other factors rather than a driver of them. 
 
-That's what Blue Team Tech Writing is here to explore.
+Good documentation may be the result of healthy teams, mature processes, and experienced practitioners rather than a cause of those things.  If that's the case, I want to understand it.
 
-## What _Blue Team Tech Writing_ Is Building
+If experienced SOC analysts consistently tell me that documentation is not where their biggest operational problems originate, that would challenge some of my assumptions. If I encounter mature security programs that succeed with minimal formal documentation, that would be worth examining. If technical writers tell me that I am overstating the role of documentation, I want to hear why.
 
-This publication is built around a single premise: **documentation is a defensive control, and it deserves the same rigor, testing, and maintenance that we apply to technical defenses.**
+One of my goals with this publication is not to defend a predetermined conclusion. I am interested in following the evidence wherever it leads.
 
-That means we're going to be exploring:
+## What comes next
 
-- **Patterns and architectures** for incident response documentation that survive real incidents and degrade gracefully
-- **Testing strategies** that reveal whether documentation will actually work when you need it
-- **Design principles** for runbooks, playbooks, and procedures that account for cognitive load and time pressure
-- **Maintenance frameworks** that keep documentation current without requiring constant rewriting
-- **Case studies** from real incidents: what documentation worked, what failed, and why
+I personally have a lot of work to do before I have anything worth contributing to this conversation. There is more reading to do, more to learn about security controls and defensive security programs, and more importantly, more people to learn from.
 
-Each roundup will examine a specific aspect of documentation as it functions in defensive security work. Some will be theoretical. Some will be tactical. All of them will start from the same place: the observation that documentation fails like a security control fails, and that's not a metaphor—it's an architectural problem we can solve.
+Over the coming months, I'd like to explore those questions through a variety of formats.
 
-The frameworks already know documentation matters. The practitioners already understand the gap. What's missing is a systematic approach to treating documentation _as infrastructure_, not as administration.
+Some issues may be simple roundups of interesting articles, discussions, and resources. Others may focus on a single topic or question. I'd also like to publish documentation reviews, interviews with practitioners and technical writers, and collections of resources that others may find useful. 
 
-That's what we're building here.
+If this publication succeeds at all, I hope it becomes a place where ideas, examples and experiences can be collected and revisited rather than rediscovered from scratch.
+
+If this publication succeeds at all, I hope it becomes a place where ideas, examples, and experiences can be collected and revisited rather than rediscovered from scratch.
+
+For now, the direction it takes will depend on what I learn, who I meet, and what conversations emerge along the way. If any of these questions resonate with you, I'd be glad to hear from you.

@@ -3,8 +3,8 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="The more I look at incident response, the more documentation seems to act like a security control.">
-<title>Roundup 0 - Incident Response Documentation, A Defensive Control | Blue Team Tech Writing</title>
+<meta name="description" content="Why I started Blue Team Tech Writing and the questions I hope to explore.">
+<title>Roundup 0 - Before We Begin | Blue Team Tech Writing</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -49,143 +49,72 @@
         <span class="post-type">Roundups</span>
         <time class="post-date">June 02, 2026</time>
       </div>
-      <h1 class="post-single-title">Roundup 0 - Incident Response Documentation, A Defensive Control</h1>
-      <p class="post-single-description">Incident response documentation is often treated as a compliance requirement or administrative task. In this article, I explore why runbooks, playbooks, and other forms of blue team documentation may function as defensive controls that help teams operate under pressure.</p>
+      <h1 class="post-single-title">Roundup 0 - Before We Begin</h1>
+      <p class="post-single-description">This publication is an attempt to explore the role documentation plays in defensive security programs. Before getting into future topics, I wanted to explain why I became interested in the subject, what questions I hope to investigate, and what readers can expect going forward.</p>
       <div class="post-single-tags">
         
       </div>
     </header>
     <div class="post-body">
       <p><img src="documentation.jpg" alt="Documentation"></p>
-<p>Most people don&rsquo;t think of documentation as a security control.</p>
-<p>When we talk about defensive security, we usually talk about things we can point to:</p>
-<ul>
-<li>Firewalls</li>
-<li>EDR</li>
-<li>SIEMs</li>
-<li>Detection rules</li>
-<li>MFA</li>
-</ul>
-<p>Documentation often sits in a different category. It feels administrative - something that comes on the side of security work, rather than security work itself.</p>
-<p>Lately, I&rsquo;ve been questioning that assumption.</p>
-<p>Documentation seems to behave like a defensive control. It fails in many of the same ways, degrades over time, and requires maintenance. When it is missing during an incident, everyone notices immediately.</p>
-<p>This is Roundup 0 of <em>Blue Team Tech Writing</em>, a series built around questions and observations from defensive security work. I&rsquo;ll be exploring how documentation, communication, and technical writing influence the way blue teams operate.</p>
-<p>A lot of those questions seem to lead back to the same place: documentation.</p>
-<p>So that&rsquo;s where I&rsquo;ll start.</p>
-<h2 id="the-failure-mode-is-identical">The Failure Mode Is Identical</h2>
-<p>The idea that pushed me toward this investigation wasn&rsquo;t simply that documentation supports security work. Most things in a security program support security work in some way. What caught my attention was how documentation fails.</p>
-<p>The failure patterns feel familiar.</p>
-<table>
-  <thead>
-      <tr>
-          <th>Security Control</th>
-          <th>Documentation</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Requires maintenance</td>
-          <td>Requires maintenance</td>
-      </tr>
-      <tr>
-          <td>Degrades over time</td>
-          <td>Degrades over time</td>
-      </tr>
-      <tr>
-          <td>Often ignored when working</td>
-          <td>Often ignored when working</td>
-      </tr>
-      <tr>
-          <td>Tested during incidents</td>
-          <td>Tested during incidents</td>
-      </tr>
-      <tr>
-          <td>Failure becomes obvious under pressure</td>
-          <td>Failure becomes obvious under pressure</td>
-      </tr>
-  </tbody>
-</table>
-<p>An incident response playbook can look complete during a review. A security runbook can exist in a wiki and satisfy every documentation requirement. Everything appears fine until someone actually needs it.</p>
-<p>Then reality starts asking questions:</p>
-<ul>
-<li>Does this process still exist?</li>
-<li>Is this screenshot still accurate?</li>
-<li>Is this escalation path correct?</li>
-<li>Does anyone still have these permissions?</li>
-<li>Who owns this system now?</li>
-</ul>
-<p>The incident didn&rsquo;t create those problems - it simply exposed them.</p>
-<p>What interests me most is that neither security controls nor documentation usually announce their decline. They tend to fail quietly.</p>
-<h3 id="knowledge-has-a-single-point-of-failure">Knowledge Has a Single Point of Failure</h3>
-<p>Another pattern I&rsquo;ve noticed has less to do with technology and more to do with people. Most teams rely on some amount of undocumented knowledge.</p>
+<h2 id="why-i-started-this-publication">Why I started this publication</h2>
+<p>I started this publication because I kept returning to the same topic: documentation.</p>
+<p>During my time working as a technical writer in cybersecurity, I was often surprised by the role documentation seemed to play within organizations. It appeared everywhere, yet it was often treated as a secondary concern.</p>
+<p>The more I observed this, the more questions I had. Blue Team Tech Writing exists because I want to explore those questions.</p>
+<h2 id="i-am-not-an-expert">I am not an expert</h2>
+<p>I am not a seasoned security practitioner, nor am I the most experienced technical writer in the field. My perspective comes from working as a technical writer in cybersecurity and spending time around the people, processes, and technologies that make up defensive security programs.</p>
+<p>That exposure gave me enough context to notice certain patterns, but not enough to claim expertise on the questions this publication aims to explore.</p>
+<p>So why write about them?</p>
+<p>Because worthwhile questions do not become less worthwhile simply because the person asking them lacks all the answers.</p>
+<p>I do not see myself as an authority on these subjects. If anything, I see myself as someone trying to connect people and ideas.  My hope is that I can contribute something useful to the conversation.</p>
+<h2 id="i-have-more-questions-than-answers">I have more questions than answers</h2>
+<p>The more I thought about documentation, the more questions I found myself asking. What started as an observation—that documentation often seems to be treated as a compliance requirement rather than an operational asset—quickly turned into a much larger set of questions.</p>
 <p>For example:</p>
-<table>
-  <thead>
-      <tr>
-          <th>Question</th>
-          <th>Common Answer</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Who owns this system?</td>
-          <td>&ldquo;Ask Sarah.&rdquo;</td>
-      </tr>
-      <tr>
-          <td>How do we investigate this alert?</td>
-          <td>&ldquo;John knows the process.&rdquo;</td>
-      </tr>
-      <tr>
-          <td>Where is that credential stored?</td>
-          <td>&ldquo;I think Mike set that up.&rdquo;</td>
-      </tr>
-      <tr>
-          <td>Why was this exception approved?</td>
-          <td>&ldquo;I&rsquo;m not sure, but Alex would know.&rdquo;</td>
-      </tr>
-  </tbody>
-</table>
-<p>Sometimes, this works. The problem is that incidents change the operating environment.</p>
-<p>During an incident:</p>
 <ul>
-<li>People are tired.</li>
-<li>Time is compressed.</li>
-<li>Information is incomplete.</li>
-<li>Decisions carry more weight.</li>
-<li>Key personnel may be unavailable.</li>
+<li>Is documentation a security control?</li>
+<li>If so, what kind of control is it?</li>
+<li>Can documentation reduce risk in the same way automation reduces risk, by reducing reliance on memory and individual expertise?</li>
+<li>How many security controls depend on undocumented assumptions, and are there controls that effectively exist only because people remember them?</li>
 </ul>
-<p>Under those conditions, tribal knowledge becomes harder to access.</p>
-<p>This is where incident response documentation starts looking less like administration and more like infrastructure. A runbook doesn&rsquo;t replace expertise, but it can preserve expertise. A playbook doesn&rsquo;t eliminate judgment, but it can reduce uncertainty.</p>
-<p>At a minimum, it gives responders somewhere to start.</p>
-<p>And the more I think about it, the more that sounds like the purpose of many defensive controls in the first place: reducing uncertainty when conditions are at their worst.</p>
-<h2 id="what-the-frameworks-already-know">What the Frameworks Already Know</h2>
-<p>The major incident response frameworks already understand that documentation is operational infrastructure, not administrative overhead. They just don&rsquo;t always use that language.</p>
-<p>NIST&rsquo;s Cybersecurity Framework calls out documentation as part of the &ldquo;Detect&rdquo; and &ldquo;Respond&rdquo; functions. Specifically, it expects organizations to have documented processes for incident detection, analysis, and response. NIST 800-61 (Computer Security Incident Handling Guide) goes further: it requires playbooks, procedures, and communication plans. These aren&rsquo;t suggestions. They&rsquo;re control requirements.</p>
-<p>CIS Controls takes a similar line. Control 19 (Incident Response Management) explicitly requires documented procedures for incident response.</p>
-<p>What&rsquo;s interesting is that both frameworks recognize documentation degrades. NIST 800-61 includes maintenance schedules. CIS Controls includes testing. Neither framework seems to assume documentation will simply exist and remain current. They build degradation into the model.</p>
-<p>But here&rsquo;s the gap in how frameworks are typically implemented: they treat documentation as a checkbox. &ldquo;Do you have a playbook? Yes.&rdquo; &ldquo;Is it current? We think so.&rdquo; The frameworks require documentation to exist and to be tested, but they don&rsquo;t give teams much guidance on how to write documentation that survives contact with reality.
-That&rsquo;s where the practitioner work begins.</p>
-<h2 id="the-practicioner-gap">The Practicioner Gap</h2>
-<p>In my experience, the gap between what frameworks require and what teams actually use comes down to a single problem: documentation written by people who have never had to use it during an incident.</p>
-<p>When a runbook is created during a calm period, it often reflects how someone thinks the process works, not how it actually works under pressure.</p>
-<p>More critically, documentation written without pressure testing doesn&rsquo;t account for the cognitive load of incident response. A perfectly complete playbook can still fail if it&rsquo;s written in a way that assumes people have time to parse it. During an incident, responders need to scan, not read. They need clear decision trees, not narrative explanations. They need to know what to do in the first thirty seconds.</p>
-<p>The practitioner gap is the space between &ldquo;documentation that satisfies compliance&rdquo; and &ldquo;documentation that actually gets used when everything is on fire.&rdquo;</p>
-<p>There&rsquo;s another gap, too: most blue teamers aren&rsquo;t trained as writers. They&rsquo;re security professionals who&rsquo;ve been asked to document their work. The result is often technically accurate but operationally unclear. Runbooks that are correct but slow to parse. Playbooks that cover the process but miss the pressure points.</p>
-<p>This is where incident response documentation stops looking like a writing problem and starts looking like a design problem. How do you architect documentation so that it&rsquo;s maintainable, scannable, and pressure-tested? How do you make it something teams will actually refer to when conditions are worst?</p>
-<p>That&rsquo;s what Blue Team Tech Writing is here to explore.</p>
-<h2 id="what-blue-team-tech-writing-is-building">What <em>Blue Team Tech Writing</em> Is Building</h2>
-<p>This publication is built around a single premise: <strong>documentation is a defensive control, and it deserves the same rigor, testing, and maintenance that we apply to technical defenses.</strong></p>
-<p>That means we&rsquo;re going to be exploring:</p>
+<p>I also find myself thinking about organizational knowledge:</p>
 <ul>
-<li><strong>Patterns and architectures</strong> for incident response documentation that survive real incidents and degrade gracefully</li>
-<li><strong>Testing strategies</strong> that reveal whether documentation will actually work when you need it</li>
-<li><strong>Design principles</strong> for runbooks, playbooks, and procedures that account for cognitive load and time pressure</li>
-<li><strong>Maintenance frameworks</strong> that keep documentation current without requiring constant rewriting</li>
-<li><strong>Case studies</strong> from real incidents: what documentation worked, what failed, and why</li>
+<li>If an analyst discovers something important and nobody records it, has the organization actually learned anything?</li>
+<li>Is &ldquo;tribal knowledge&rdquo; simply a euphemism for undocumented operational risk?</li>
+<li>If a new employee cannot discover something on their own, does the organization truly know it?</li>
+<li>At what point does poor documentation become a business continuity issue rather than merely an inconvenience?</li>
 </ul>
-<p>Each roundup will examine a specific aspect of documentation as it functions in defensive security work. Some will be theoretical. Some will be tactical. All of them will start from the same place: the observation that documentation fails like a security control fails, and that&rsquo;s not a metaphor—it&rsquo;s an architectural problem we can solve.</p>
-<p>The frameworks already know documentation matters. The practitioners already understand the gap. What&rsquo;s missing is a systematic approach to treating documentation <em>as infrastructure</em>, not as administration.</p>
-<p>That&rsquo;s what we&rsquo;re building here.</p>
+<p>There are practical questions as well:</p>
+<ul>
+<li>What distinguishes documentation that satisfies an auditor from documentation that helps an operator?</li>
+<li>Why does documentation so often get deferred until after the work is complete?</li>
+<li>Is documentation a lagging indicator of organizational maturity, or can it actively contribute to maturity over time?</li>
+</ul>
+<p>I do not have answers to these questions. In many cases, I am not even sure I am asking the right ones. But they seem worth exploring.</p>
+<h2 id="i-want-to-hear-from-practitioners-and-technical-writers">I want to hear from practitioners and technical writers</h2>
+<p>Many of the questions raised in this issue cannot be answered through reading alone. They require the perspectives of people who have encountered these problems in practice.</p>
+<p>Practitioners and technical writers often approach documentation from different angles, but both groups have valuable experience to contribute.</p>
+<p>Practitioners understand the realities of operating security programs, responding to incidents, managing tools, and making decisions under pressure. Technical writers bring expertise in organizing information, maintaining knowledge, and helping people find and use what they need.</p>
+<p>I suspect some of the most interesting insights exist at the intersection of those perspectives. Bringing those viewpoints together is one of the goals of this publication.</p>
+<h2 id="this-publication-is-an-experiment">This publication is an experiment</h2>
+<p>More specifically, it is an attempt to investigate a set of questions that I find increasingly difficult to ignore.</p>
+<p>I suspect documentation plays a larger role in defensive security than it is often given credit for. I suspect there are lessons to be learned from the way organizations create, maintain, share, and lose operational knowledge. I suspect there are connections between documentation, resilience, continuity, onboarding, and day-to-day operations that are worth exploring.</p>
+<p>At this point, however, they remain suspicions.</p>
+<p>Rather than trying to present definitive answers, I would rather approach these questions as an investigation.</p>
+<p>For now, the experiment is simple: ask good questions, follow the evidence, and see where it leads.</p>
+<h2 id="what-i-might-be-wrong-about">What I might be wrong about</h2>
+<p>The biggest assumption behind this publication is that documentation matters more than many organizations treat it. That suspicion is what led me to start asking these questions in the first place.</p>
+<p>It may also be wrong.</p>
+<p>I may be overestimating the role documentation plays in defensive security programs. It is possible that documentation is often downstream of other factors rather than a driver of them.</p>
+<p>Good documentation may be the result of healthy teams, mature processes, and experienced practitioners rather than a cause of those things.  If that&rsquo;s the case, I want to understand it.</p>
+<p>If experienced SOC analysts consistently tell me that documentation is not where their biggest operational problems originate, that would challenge some of my assumptions. If I encounter mature security programs that succeed with minimal formal documentation, that would be worth examining. If technical writers tell me that I am overstating the role of documentation, I want to hear why.</p>
+<p>One of my goals with this publication is not to defend a predetermined conclusion. I am interested in following the evidence wherever it leads.</p>
+<h2 id="what-comes-next">What comes next</h2>
+<p>I personally have a lot of work to do before I have anything worth contributing to this conversation. There is more reading to do, more to learn about security controls and defensive security programs, and more importantly, more people to learn from.</p>
+<p>Over the coming months, I&rsquo;d like to explore those questions through a variety of formats.</p>
+<p>Some issues may be simple roundups of interesting articles, discussions, and resources. Others may focus on a single topic or question. I&rsquo;d also like to publish documentation reviews, interviews with practitioners and technical writers, and collections of resources that others may find useful.</p>
+<p>If this publication succeeds at all, I hope it becomes a place where ideas, examples and experiences can be collected and revisited rather than rediscovered from scratch.</p>
+<p>If this publication succeeds at all, I hope it becomes a place where ideas, examples, and experiences can be collected and revisited rather than rediscovered from scratch.</p>
+<p>For now, the direction it takes will depend on what I learn, who I meet, and what conversations emerge along the way. If any of these questions resonate with you, I&rsquo;d be glad to hear from you.</p>
 
     </div>
     <footer class="post-single-footer">
